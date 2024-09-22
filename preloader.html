@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Preloader Component</title>
+    <style>
+        @keyframes loading{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; box-sizing: border-box; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    <div class="preLoad-container" style="background-color: #222222; position: fixed; width: 100%; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <div class="loader-content" style="color: white; display: flex; flex-direction:column; justify-content: center; align-items: center; font-size: 1.6rem;">
+        <div class="copy" style="display: flex; gap: 0; justify-content: center; align-items: center;">
+            <img src="./Assets/Images/logo-removebg-preview.png" alt="site logo">
+            <p class="ml16">jamesdennis.org</p>
+        </div>
+        <div class="count" style="display: flex; flex-direction: column; gap: 0; justify-content: center; align-items: center;">
+            <div class="loading-count" style="display: flex; gap: 1em; font-size: 1rem">
+                <p>Loading...</p>
+                <p>0</p>
+            </div>
+            <div class="loading-bar" style="border: 1px solid rgba(255, 166, 0, 0.329); width: 600px; height: 6px; border-radius: 4px; padding: 1px">
+                <div class="fill" style="height: 4px; border-radius: 2px; background: orange; padding: 1px 0; animation: loading 3.5s forwards cubic-bezier(0, 0, 0, 0)"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
